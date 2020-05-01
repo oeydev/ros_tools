@@ -64,7 +64,6 @@ sudo apt-get install -y python-rosinstall clang-format-6.0 vim python-flake8 git
 echo "[Make the catkin workspace and test the catkin_make]"
 mkdir -p $HOME/$name_catkin_workspace/src
 cd $HOME/$name_catkin_workspace/src
-catkin_init_workspace
 cd $HOME/$name_catkin_workspace
 catkin_make
 
@@ -76,6 +75,8 @@ sh -c "echo \"export ROS_MASTER_URI=http://localhost:11311\" >> ~/.bashrc"
 sh -c "echo \"export ROS_HOSTNAME=localhost\" >> ~/.bashrc"
 
 source $HOME/.bashrc
+sudo apt install python-rosdep python-rosinstall python-rosinstall-generator python-wstool build-essential
+sudo apt install ros-melodic-navigation ros-melodic-cartographer-ros ros-melodic-teb-local-planner ros-melodic-twist-mux
 
 echo "[Complete!!!]"
 exit 0
