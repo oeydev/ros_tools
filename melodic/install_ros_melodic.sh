@@ -75,8 +75,12 @@ sh -c "echo \"export ROS_MASTER_URI=http://localhost:11311\" >> ~/.bashrc"
 sh -c "echo \"export ROS_HOSTNAME=localhost\" >> ~/.bashrc"
 
 source $HOME/.bashrc
-sudo apt install python-rosdep python-rosinstall python-rosinstall-generator python-wstool build-essential
-sudo apt install ros-melodic-navigation ros-melodic-cartographer-ros ros-melodic-teb-local-planner ros-melodic-twist-mux
+sudo apt install python-rosdep python-rosinstall python-rosinstall-generator python-wstool build-essential -y
 
+sudo apt install ros-melodic-navigation ros-melodic-cartographer-ros ros-melodic-teb-local-planner ros-melodic-twist-mux -y
+
+cd $HOME
+sudo rosdep init
+rosdep update
 echo "[Complete!!!]"
 exit 0
