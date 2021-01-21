@@ -33,6 +33,7 @@ fi
 echo "[Install ROS 2 packages]"
 sudo apt update
 sudo apt install -y ros-foxy-ros-base python3-rosdep2
+sudo apt install python3-colcon-common-extensions
 
 echo "[Environment setup and getting rosinstall]"
 sh -c "source /opt/ros/$name_ros_version/setup.bash"
