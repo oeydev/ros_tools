@@ -32,7 +32,7 @@ fi
 
 echo "[Install ROS 2 packages]"
 sudo apt update
-sudo apt install ros-foxy-ros-base
+sudo apt install -y ros-foxy-ros-base
 
 echo "[Environment setup and getting rosinstall]"
 source /opt/ros/$name_ros_version/setup.sh
