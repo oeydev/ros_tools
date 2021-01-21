@@ -21,7 +21,7 @@ sudo update-locale LC_ALL=en_US.UTF-8 LANG=en_US.UTF-8
 export LANG=en_US.UTF-8
 
 echo "[Install additional]"
-sudo apt install -y locales curl gnupg2 lsb-release build-essential git wget python3-pip
+sudo apt install -y locales curl gnupg2 lsb-release build-essential git wget python3-pip vim
 pip3 install -U argcomplete
 
 echo "[Add the ROS 2 repository]"
@@ -32,7 +32,7 @@ fi
 
 echo "[Install ROS 2 packages]"
 sudo apt update
-sudo apt install -y ros-foxy-ros-base
+sudo apt install -y ros-foxy-ros-base python3-rosdep2
 
 echo "[Environment setup and getting rosinstall]"
 sh -c "source /opt/ros/$name_ros_version/setup.bash"
