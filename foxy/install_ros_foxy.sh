@@ -36,6 +36,7 @@ sudo apt install -y ros-foxy-ros-base
 
 echo "[Environment setup and getting rosinstall]"
 source /opt/ros/$name_ros_version/setup.sh
+sh -c "source /opt/ros/$name_ros_version/setup.bash"
 
 echo "[Initialize rosdep]"
 if [ ! -e /etc/ros/rosdep/sources.list.d/20-default.list ]; then
