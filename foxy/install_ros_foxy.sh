@@ -47,8 +47,7 @@ rosdep update
 
 echo "[Set the ROS evironment]"
 sh -c "echo \"source /opt/ros/$name_ros_version/setup.bash\" >> ~/.bashrc"
-sh -c "echo \"export ROS_MASTER_URI=http://localhost:11311\" >> ~/.bashrc"
-sh -c "echo \"export ROS_HOSTNAME=localhost\" >> ~/.bashrc"
+sh -c "echo \"export ROS_DOMAIN_ID=10\" >> ~/.bashrc"
 
 source $HOME/.bashrc
 echo "[Complete!!!]"
